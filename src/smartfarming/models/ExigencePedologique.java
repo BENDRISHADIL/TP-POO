@@ -9,9 +9,7 @@ public class ExigencePedologique {
     private double azoteMin;
     private double azoteMax;
 
-    public ExigencePedologique(double phMin, double phMax,
-                                double humiditeMin, double humiditeMax,
-                                double azoteMin, double azoteMax) {
+    public ExigencePedologique(double phMin, double phMax,double humiditeMin, double humiditeMax,double azoteMin, double azoteMax) {
         this.phMin = phMin;
         this.phMax = phMax;
         this.humiditeMin = humiditeMin;

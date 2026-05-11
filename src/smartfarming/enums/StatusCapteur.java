@@ -1,4 +1,4 @@
-package out.smartfarming.enums;
+package smartfarming.enums;
 
 public enum StatusCapteur {
     ACTIF,//capteur en fonctionnement normal

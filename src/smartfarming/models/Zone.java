@@ -1,9 +1,10 @@
 package smartfarming.models;
 
+import java.util.ArrayList;
+import java.util.List;
 import smartfarming.enums.StatutZone;
 import smartfarming.interfaces.Suspendable;
-import java.util.List;
-import java.util.ArrayList;
+import smartfarming.models.hadil_code.Capteur;
 
 public abstract class Zone implements Suspendable {
 
@@ -11,7 +12,7 @@ public abstract class Zone implements Suspendable {
     private String nom;
     private StatutZone statut;
     private List<ProductionRecord> productions;
-    private List<String> capteurs;
+    private List<Capteur> capteurs;
 
     public Zone(String code, String nom) {
         this.code = code;
@@ -27,7 +28,7 @@ public abstract class Zone implements Suspendable {
     public String getNom() { return nom; }
     public StatutZone getStatut() { return statut; }
     public List<ProductionRecord> getProductions() { return productions; }
-    public List<String> getCapteurs() { return capteurs; }
+    public List<Capteur> getCapteurs() { return capteurs; }
 
     public void setNom(String nom) { this.nom = nom; }
 
@@ -35,7 +36,7 @@ public abstract class Zone implements Suspendable {
         this.productions.add(production);
     }
 
-    public void ajouterCapteur(String capteur) {
+    public void ajouterCapteur(Capteur capteur) {
         this.capteurs.add(capteur);
     }
 

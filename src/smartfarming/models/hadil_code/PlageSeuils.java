@@ -1,4 +1,4 @@
-package out.smartfarming.models.hadil_code;
+package smartfarming.models.hadil_code;
 
 public class PlageSeuils {
     private double valeurMin;
@@ -7,6 +7,15 @@ public class PlageSeuils {
     public PlageSeuils(double valeurMin, double valeurMax) {
         this.valeurMin = valeurMin;
         this.valeurMax = valeurMax;
+    }
+    //-------------
+    //getters
+    //-----------------
+    public double getValeurMin() {
+        return valeurMin;
+    }
+    public double getValeurMax() {
+        return valeurMax;
     }
 
     /*vérifier si une valeurs est hors seuil autoriser */

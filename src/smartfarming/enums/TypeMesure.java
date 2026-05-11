@@ -1,4 +1,4 @@
-package out.smartfarming.enums;
+package smartfarming.enums;
 
 public enum TypeMesure {
     // Types de mesures possibles pour les capteurs

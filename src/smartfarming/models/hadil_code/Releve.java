@@ -1,4 +1,4 @@
-package out.smartfarming.models.hadil_code;
+package smartfarming.models.hadil_code;
 
 import java.time.LocalDateTime;
 public abstract class Releve {
@@ -17,7 +17,17 @@ public abstract class Releve {
     public Capteur getCapteur() {
         return capteur;
     }
+    //--------------------------
+    //gerters 
+    //--------------------------
+    public String getHorodatage() {
+        return dateHeure.toString();
+    }
+    public String getCodeCapteur() {
+        return capteur.getCodeUnique();
+    }
+
 /* chaque sous classe affiche ces propres informations */
 
-    public abstract String AfficherReleve ();
+    public abstract String afficher ();
 }
