@@ -13,6 +13,7 @@ private double longitude;
         super(capteur);
         this.latitude = latitude;
         this.longitude = longitude;
+        capteur.ajouterAuHistorique(this);
     }
 
     

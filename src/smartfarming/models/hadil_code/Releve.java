@@ -1,7 +1,13 @@
 package smartfarming.models.hadil_code;
 
 import java.time.LocalDateTime;
+
+/**
+ * Classe abstraite représentant un relevé émis par un capteur.
+ * Tout relevé a une date/heure et un capteur source.
+ */
 public abstract class Releve {
+
     private LocalDateTime dateHeure;
     private Capteur capteur;
 
@@ -11,10 +17,16 @@ public abstract class Releve {
      * @param capteur le capteur qui a émis ce relevé
      */
     public Releve(Capteur capteur) {
-        this.dateHeure = LocalDateTime.now();// Enregistre la date et l'heure du relevé a momnet de sa creation
         this.capteur = capteur;
+        this.dateHeure = LocalDateTime.now();  // enregistre la date/heure de création
     }
 
+    //  Retourne LocalDateTime (pas String)
+    public LocalDateTime getHorodatage() {
+        return dateHeure;
+    }
+
+    //  Garde aussi cette méthode pour compatibilité
     public LocalDateTime getDateHeure() {
         return dateHeure;
     }
@@ -22,17 +34,18 @@ public abstract class Releve {
     public Capteur getCapteur() {
         return capteur;
     }
-    //--------------------------
-    //gerters 
-    //--------------------------
-    public String getHorodatage() {
-        return dateHeure.toString();
-    }
+
     public String getCodeCapteur() {
         return capteur.getCodeUnique();
     }
 
-/* chaque sous classe affiche ces propres informations */
+    /**
+     * Méthode abstraite : chaque sous-classe affiche ses propres données.
+     */
+    public abstract String afficher();
 
-    public abstract String afficher ();
+    @Override
+    public String toString() {
+        return afficher();
+    }
 }

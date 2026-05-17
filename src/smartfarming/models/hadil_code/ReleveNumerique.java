@@ -8,6 +8,7 @@ public class ReleveNumerique extends Releve{
         super(capteur);
         this.valeur = valeur;
         this.unite = unite;
+        capteur.ajouterAuHistorique(this);
     }
 
     public Double getValeur() {
