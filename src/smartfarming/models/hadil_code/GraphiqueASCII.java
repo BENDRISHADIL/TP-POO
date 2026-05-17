@@ -1,9 +1,9 @@
 package smartfarming.models.hadil_code;
 
-import smartfarming.models.Zone;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
+import smartfarming.models.Zone;
 
 /**
  * Affiche des graphiques ASCII dans le terminal.
@@ -21,7 +21,7 @@ public class GraphiqueASCII {
      */
     public static void afficherCapteur(Capteur capteur, LocalDate debut, LocalDate fin) {
         
-        // ✅ CORRIGE — utilise consulterHistorique (pas ...Detaille)
+        //  CORRIGE — utilise consulterHistorique (pas ...Detaille)
         List<Releve> releves = capteur.consulterHistorique(debut, fin);
         
         if (releves.isEmpty()) {
@@ -164,7 +164,7 @@ public class GraphiqueASCII {
      */
     public static void afficherStatistiques(Capteur capteur, LocalDate debut, LocalDate fin) {
         
-        // ✅ CORRIGE — utilise consulterHistorique
+        //  CORRIGE — utilise consulterHistorique
         List<Releve> releves = capteur.consulterHistorique(debut, fin);
         
         if (releves.isEmpty()) {
