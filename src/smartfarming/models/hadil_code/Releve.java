@@ -5,6 +5,11 @@ public abstract class Releve {
     private LocalDateTime dateHeure;
     private Capteur capteur;
 
+    /**
+     * Constructeur — horodaté automatiquement à la création.
+     * 
+     * @param capteur le capteur qui a émis ce relevé
+     */
     public Releve(Capteur capteur) {
         this.dateHeure = LocalDateTime.now();// Enregistre la date et l'heure du relevé a momnet de sa creation
         this.capteur = capteur;
